@@ -1,0 +1,20 @@
+
+# --- 1. GUI 界面 ---
+PySide6==6.10.0
+
+# --- 2. 核心 AI/ML 库 ---
+torch==2.9.0
+torchaudio==2.9.0
+openai-whisper==20250625
+scikit-learn==1.7.2
+numpy==1.26.4
+
+# --- 3. 说话人识别 (Diarization) ---
+# 这是我们从 Git 安装的特定版本
+wespeaker @ git+https://github.com/wenet-e2e/wespeaker.git@67f0f4a8d472e6e2203d7baca38daba818af17f3
+
+# --- 4. API 与文件处理 ---
+requests==2.32.5
+srt==3.5.3
+python-dotenv==1.2.1
+tqdm==4.67.1
