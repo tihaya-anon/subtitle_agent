@@ -14,9 +14,13 @@ dependencies = [
     "srt==3.5.3",
     "torch==2.9.0",
     "torchaudio==2.9.0",
+    "torchcodec>=0.8.1",
     "tqdm==4.67.1",
     "wespeaker",
 ]
 
 [tool.uv.sources]
 wespeaker = { git = "https://github.com/wenet-e2e/wespeaker.git", rev = "67f0f4a8d472e6e2203d7baca38daba818af17f3" }
+
+[tool.uv]
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
