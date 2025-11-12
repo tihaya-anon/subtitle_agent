@@ -38,13 +38,24 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 #         sys.exit(1)
 
 
-def cli():
+def cli(wav: str, name: str):
     from src.agent import run_single_file_process
     from pathlib import Path
 
-    run_single_file_process(Path("./test.wav"), "BanG Dream! It's MyGO!!!!!")
+    run_single_file_process(Path(wav), name)
+
+
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Bangumi Subtitle Generator")
+    parser.add_argument(
+        "--wav", type=str, required=True, help="Path to the input audio file"
+    )
+    parser.add_argument("--name", type=str, required=True, help="Name of the anime")
+    args = parser.parse_args()
+    cli(args.wav, args.name)
 
 
 if __name__ == "__main__":
-    # main()
-    cli()
+    main()
